@@ -1,0 +1,298 @@
+:root {
+  --gold: #c5a059;
+  --gold-light: #e6ca94;
+  --bg-color: #faf7f2;
+  --text-dark: #2c2927;
+  --text-muted: #7a7571;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --shadow: 0 10px 30px rgba(197, 160, 89, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Music Toggle Button */
+.music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--card-bg);
+  border: 1px solid var(--gold-light);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.2s;
+}
+
+.music-toggle:active {
+  transform: scale(0.9);
+}
+
+/* Hero Cover */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle, #ffffff 0%, #faf7f2 100%);
+}
+
+.hero-card {
+  background: var(--card-bg);
+  padding: 40px 24px;
+  border-radius: 24px;
+  border: 1px solid var(--gold-light);
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 100%;
+}
+
+.sub-title {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;
+  color: var(--text-dark);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.invitation-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.open-btn {
+  background: linear-gradient(135deg, #d4af37, #aa7c11);
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(170, 124, 17, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.open-btn:active {
+  transform: scale(0.96);
+}
+
+/* Hidden Section Animation */
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.fade-in {
+  display: block;
+  animation: fadeIn 1.2s forwards ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Details Section */
+.details-section {
+  padding: 20px 20px 60px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: white;
+  padding: 20px 8px;
+  border-radius: 16px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  box-shadow: var(--shadow);
+}
+
+.info-card .icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.info-card h3 {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.info-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Timer */
+.timer-section {
+  margin-bottom: 40px;
+}
+
+.timer-section h2 {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.time-block {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.time-block span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  display: block;
+}
+
+.time-block p {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Gallery */
+.gallery-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.photo-frame {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 2px solid white;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.photo-frame:active img {
+  transform: scale(1.05);
+}
+
+/* Map Button */
+.map-section {
+  margin-bottom: 40px;
+}
+
+.map-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+  padding-top: 20px;
+}
+
+.footer-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: var(--gold);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
