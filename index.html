@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Հրավիրատոմս | 21.11.2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop src="music.mp3"></audio>
+
+  <!-- Sound Toggle Button -->
+  <button id="music-btn" class="music-toggle" onclick="toggleMusic()" aria-label="Music Toggle">
+    <span id="music-icon">🎵</span>
+  </button>
+
+  <!-- Hero Cover Section -->
+  <header class="hero">
+    <div class="hero-card">
+      <p class="sub-title">ՍԻՐՈՎ ՀՐԱՎԻՐՈՒՄ ԵՆՔ</p>
+      <h1 class="main-title">Մեր Հատուկ Օրը</h1>
+      <p class="invitation-text">Ուրախ կլինենք կիսել այս գեղեցիկ օրը Ձեզ հետ</p>
+      <button class="open-btn" onclick="openInvitation()">Բացել հրավերը ✨</button>
+    </div>
+  </header>
+
+  <!-- Main Details Section -->
+  <main id="invitation-details" class="details-section hidden">
+    
+    <!-- Event Details -->
+    <section class="info-grid">
+      <div class="info-card">
+        <div class="icon">📅</div>
+        <h3>ԱՄՍԱԹԻՎ</h3>
+        <p>21.11.2026</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">⏰</div>
+        <h3>ԺԱՄ</h3>
+        <p>17:30</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">📍</div>
+        <h3>ՎԱՅՐ</h3>
+        <p>Սևան</p>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="timer-section">
+      <h2>Մնացել է՝</h2>
+      <div class="countdown">
+        <div class="time-block"><span id="days">00</span><p>Օր</p></div>
+        <div class="time-block"><span id="hours">00</span><p>Ժամ</p></div>
+        <div class="time-block"><span id="minutes">00</span><p>Րոպե</p></div>
+        <div class="time-block"><span id="seconds">00</span><p>Վայրկյան</p></div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+      <h2 class="section-title">Գալերեա</h2>
+      <div class="gallery-grid">
+        <div class="photo-frame" onclick="openLightbox('photo1.jpg')">
+          <img src="photo1.jpg" alt="Լուսանկար 1">
+        </div>
+        <div class="photo-frame" onclick="openLightbox('photo2.jpg')">
+          <img src="photo2.jpg" alt="Լուսանկար 2">
+        </div>
+        <div class="photo-frame" onclick="openLightbox('photo3.jpg')">
+          <img src="photo3.jpg" alt="Լուսանկար 3">
+        </div>
+        <div class="photo-frame" onclick="openLightbox('photo4.jpg')">
+          <img src="photo4.jpg" alt="Լուսանկար 4">
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Map Link -->
+    <section class="map-section">
+      <a href="https://maps.google.com/?q=Sevan,Armenia" target="_blank" class="map-btn">
+        📍 Բացել քարտեզը
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p class="footer-text">Սիրով սպասում ենք Ձեզ ❤️</p>
+    </footer>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Մեծացված նկար">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
